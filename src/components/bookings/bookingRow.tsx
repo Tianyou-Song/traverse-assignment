@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
+import { Link, useNavigate } from '@builder.io/qwik-city';
 import type { Booking } from '~/types/bookings.types';
 import { getBookingTotalFormatted } from '~/utils/bookings.utils';
 
@@ -11,6 +11,9 @@ import { getBookingTotalFormatted } from '~/utils/bookings.utils';
 
 // 5. Include a link to /bookings/<id></id>
 export const BookingRow = component$(({ booking }: { booking: Booking; }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const nav = useNavigate();
+
   const total = getBookingTotalFormatted(booking);
   const statusDisplay = booking.cancelled ?
     <span

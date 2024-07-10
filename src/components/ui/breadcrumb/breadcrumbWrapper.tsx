@@ -2,13 +2,13 @@ import { component$ } from '@builder.io/qwik';
 import { Breadcrumb } from './breadcrumb';
 
 export default component$(({ items }: { items: { name: string, link?: string; }[]; }) => {
-  const currentItem = items.pop();
-  if (!currentItem) return;
+  const currentItem = items[items.length - 1];
+  const previousItems = items.slice(0, items.length - 1);
 
   return (
     <Breadcrumb.Root>
       <Breadcrumb.List>
-        {items.map((item, index) => (
+        {previousItems.map((item, index) => (
           <>
             <Breadcrumb.Item key={index}>
               <Breadcrumb.Link

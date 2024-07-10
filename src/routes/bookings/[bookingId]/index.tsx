@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik';
-import { Link, routeLoader$ } from '@builder.io/qwik-city';
+import { Link, routeLoader$, useNavigate } from '@builder.io/qwik-city';
+import Breadcrumb from '~/components/ui/breadcrumb/breadcrumbWrapper';
 import { isMessageGuard } from '~/types/bookings.types';
 import { fetchBookingById, getBookingTotalFormatted } from '~/utils/bookings.utils';
 
@@ -9,6 +10,8 @@ export const useBooking = routeLoader$(async (requestEvent) => {
   return fetchBookingById(requestEvent, bookingId);
 });
 export default component$(() => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const nav = useNavigate();
   const { value: booking } = useBooking();
   if (isMessageGuard(booking)) return (
     <div
@@ -59,11 +62,27 @@ export default component$(() => {
     <div
       class='flex flex-col items-start gap-8 p-8 w-full'
     >
+      <div
+        class='self-start'
+      >
+        <Breadcrumb
+          items={[{
+            name: 'Home',
+            link: '/',
+          }, {
+            name: 'Bookings',
+            link: '/bookings/',
+          }, {
+            name: booking.id.toString(),
+          }]}
+        />
+      </div>
+
       <div>
         Hotel: {booking.hotel.name}
       </div>
       <div>
-        Occupancy: {booking.occupancy}
+        Occupancy: {booking.occupancy} {' '}
         {booking.occupancy > booking.room.maxOccupancy &&
           <span
           class='text-[#FF9580]'
