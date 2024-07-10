@@ -12,8 +12,8 @@ export default component$(() => {
         Welcome to Traverse Admin!
       </h1>
       <Link
-        class="text-4xl underline text-sky-200"
-        href="/bookings"
+        class="text-4xl hover:underline text-[#7970A9]"
+        href="/bookings/"
       >
         View Bookings
       </Link>

@@ -30,7 +30,7 @@ export default component$(() => {
         <RouterHead />
       </head>
       <body
-        class="bg-slate-900 text-slate-100 flex flex-col items-center justify-center"
+        class="bg-[#22212C] text-[#F8F8F2] text-lg flex flex-col items-center justify-center"
         lang="en"
       >
         <RouterOutlet />

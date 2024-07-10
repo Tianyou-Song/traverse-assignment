@@ -103,3 +103,11 @@ export const convertDetailedBookingResponseToDetailedBooking = (detailedBookingR
     updatedAt: new Date(detailedBookingResponse.updatedAt),
   };
 };
+
+export const isDetailedBookingGuard = (booking: DetailedBooking | { message: any; }): booking is DetailedBooking => {
+  return (booking as DetailedBooking).id !== undefined;
+};
+
+export const isMessageGuard = (booking: DetailedBooking | { message: any; }): booking is { message: any; } => {
+  return (booking as { message: any; }).message !== undefined;
+}

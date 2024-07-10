@@ -2,6 +2,7 @@
   "version": "6.0",
   "nxVersion": "19.4.2",
   "deps": {
+    "tailwindcss-animate": "^1.0.7",
     "@builder.io/qwik": "^1.7.0",
     "@builder.io/qwik-city": "^1.7.0",
     "@qwik-ui/headless": "^0.5.0",
@@ -36,7 +37,7 @@
       "my-qwik-empty-starter": [
         {
           "file": ".env.sample",
-          "hash": "4557908872727441957"
+          "hash": "17248057113301384175"
         },
         {
           "file": ".eslintignore",
@@ -80,7 +81,7 @@
         },
         {
           "file": "package.json",
-          "hash": "1009273920310958727",
+          "hash": "4294039847662602743",
           "deps": [
             "npm:@builder.io/qwik",
             "npm:@builder.io/qwik-city",
@@ -103,7 +104,8 @@
             "npm:typescript",
             "npm:undici",
             "npm:vite",
-            "npm:vite-tsconfig-paths"
+            "npm:vite-tsconfig-paths",
+            "npm:tailwindcss-animate"
           ]
         },
         {
@@ -135,6 +137,10 @@
           "hash": "1792037603741036108"
         },
         {
+          "file": "src/components/bookings/bookingRow.tsx",
+          "hash": "10216845485745122256"
+        },
+        {
           "file": "src/components/router-head/router-head.tsx",
           "hash": "13869225469366272939"
         },
@@ -152,23 +158,23 @@
         },
         {
           "file": "src/global.css",
-          "hash": "2885799375830454325"
+          "hash": "14221340038390401754"
         },
         {
           "file": "src/root.tsx",
-          "hash": "2032960384381040240"
+          "hash": "1189944286932483837"
         },
         {
           "file": "src/routes/bookings/[bookingId]/index.tsx",
-          "hash": "839562243298913157"
+          "hash": "8552702740784576682"
         },
         {
           "file": "src/routes/bookings/index.tsx",
-          "hash": "11235739182888596374"
+          "hash": "785473534465158709"
         },
         {
           "file": "src/routes/index.tsx",
-          "hash": "3520048188442730153"
+          "hash": "16329643512355810350"
         },
         {
           "file": "src/routes/layout.tsx",
@@ -180,11 +186,11 @@
         },
         {
           "file": "src/types/bookings.types.ts",
-          "hash": "12609147831340487332"
+          "hash": "13686017279506732742"
         },
         {
           "file": "src/utils/bookings.utils.ts",
-          "hash": "9893278668151508189"
+          "hash": "11846614852250452223"
         },
         {
           "file": "src/utils/traverseApi.utils.ts",
@@ -192,7 +198,7 @@
         },
         {
           "file": "tailwind.config.js",
-          "hash": "2698005983013824542"
+          "hash": "15113440422418196987"
         },
         {
           "file": "tsconfig.json",
@@ -201,6 +207,10 @@
         {
           "file": "vite.config.ts",
           "hash": "9251328777692163288"
+        },
+        {
+          "file": "yarn.lock",
+          "hash": "16906035307220845665"
         }
       ]
     },
